@@ -13,9 +13,7 @@ root="$PWD"
 ethdir="$workspace/src/github.com/ethereum"
 if [ ! -L "$ethdir/go-ethereum" ]; then
     mkdir -p "$ethdir"
-    cd "$ethdir"
-    ln -s ../../../../../. go-ethereum
-    cd "$root"
+    ln -s ../../../../../. $ethdir/go-ethereum
 fi
 
 # Set up the environment to use the workspace.
