@@ -17,7 +17,8 @@ fi
 
 # Set up the environment to use the workspace.
 # Also add Godeps workspace so we build using canned dependencies.
-GOPATH="$ethdir/go-ethereum/Godeps/_workspace:$fake_workspace"
+godep_workspace="$ethdir/go-ethereum/Godeps/_workspace"
+GOPATH="$godep_workspace:$fake_workspace"
 GOBIN="$PWD/build/bin"
 export GOPATH GOBIN
 
